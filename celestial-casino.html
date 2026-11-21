@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Celestial Casino case study | Charlotte Erkau</title>
+<meta name="description" content="Case study: Celestial Casino, a 3D blackjack game built at devHacks 2026.">
+<link rel="icon" href="assets/bdf4886434.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;cursor:url(assets/a1a898a6dc.svg) 3 2, auto}
+a{color:#1F1D1A}a:hover{opacity:.75}
+button:focus-visible,a:focus-visible{outline:3px solid #3B4FA0;outline-offset:3px}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-template">
+<div style="min-height: 100vh; background: #FCF6E3; color: #1F1D1A; font-family: 'DM Sans', system-ui, sans-serif; font-size: 17px; line-height: 1.65">
+
+  <header style="max-width: 1120px; margin: 0 auto; padding: 28px 32px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between">
+    <a href="index.html" style="font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 20px; text-decoration: none; letter-spacing: -0.5px">charlotte erkau</a>
+    <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 500">
+      <a href="about.html" style="padding: 10px 14px; text-decoration: none">about</a>
+      <a href="projects.html" aria-current="page" style="padding: 10px 14px; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px">projects</a>
+      <a href="sketchbook.html" style="padding: 10px 14px; text-decoration: none">sketchbook</a>
+      <a href="contact.html" style="padding: 10px 14px; text-decoration: none">contact</a>
+      <a href="#" style="padding: 10px 16px; text-decoration: none; border: 2px solid #1F1D1A; border-radius: 999px; margin-left: 6px">resume ↗</a>
+    </nav>
+  </header>
+
+  <main style="max-width: 1120px; margin: 0 auto; padding: 0 32px 96px">
+    <a href="projects.html" style="display: inline-flex; align-items: center; min-height: 44px; margin-top: 24px; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; text-decoration: none">← all projects</a>
+
+    <section style="padding: 24px 0 40px; max-width: 800px">
+      <p style="display: inline-block; margin: 0 0 18px; padding: 5px 14px; border-radius: 999px; border: 2px solid #1F1D1A; background: #CFDEFC; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; color: #1F1D1A">case study · 3D art</p>
+      <h1 style="margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.12; letter-spacing: -1.5px">Celestial Casino: a game in 24 hours</h1>
+      <p style="margin: 0 0 14px; color: #3D372F">Celestial Casino is a 3D blackjack game inspired by Star Wars, built by a team of two at devHacks 2026, a 24-hour hackathon. Players sit down at a blackjack table in a space-themed casino.</p>
+      <p style="margin: 0; color: #3D372F">My partner and I were both interested in game design but had no prior game development experience to start from. We spent the first part of the event working through concepts, then turned our idea into a playable game before time ran out. I created the 3D blackjack table in Blender, a tool I learned during the hackathon itself.</p>
+    </section>
+
+    <dl style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; margin: 0 0 56px; border-top: 2px solid #2B2E45; border-bottom: 2px solid #2B2E45">
+      <div style="padding: 20px 20px 20px 0"><dt style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">my focus</dt><dd style="margin: 4px 0 0; font-weight: 700">3D modelling &amp; texturing</dd></div>
+      <div style="padding: 20px"><dt style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">also</dt><dd style="margin: 4px 0 0; font-weight: 700">Helped with the game logic</dd></div>
+      <div style="padding: 20px"><dt style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">event</dt><dd style="margin: 4px 0 0; font-weight: 700">devHacks 2026 · 24 hours</dd></div>
+      <div style="padding: 20px"><dt style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">tools</dt><dd style="margin: 4px 0 0; font-weight: 700">Blender, Unity, C#</dd></div>
+    </dl>
+
+    <section aria-labelledby="play-h" style="margin-bottom: 72px">
+      <h2 id="play-h" style="margin: 0 0 8px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 30px; letter-spacing: -1px">see it in action</h2>
+      <p style="margin: 0 0 20px; color: #3D372F">A two-minute recording of the game, from its Star Wars-inspired introduction to a few rounds of blackjack against the dealer.</p>
+      <div style="border-radius: 24px; border: 2px solid #2B2E45; background: #0A0B1E; box-shadow: 6px 6px 0 rgba(43,46,69,.12); overflow: hidden; line-height: 0">
+        <video src="assets/b69bc8cdda.mp4" poster="assets/68b68212b6.jpg" controls preload="none" playsinline style="display: block; width: 100%; height: auto; aspect-ratio: 1280 / 716; background: #0A0B1E">Your browser can't play this video.</video>
+      </div>
+      <p style="margin: 14px 0 0; padding: 12px 16px; border-left: 4px solid #3B4FA0; background: #E6ECFC; border-radius: 0 12px 12px 0; font-size: 15px; color: #3D372F"><strong style="color: #1F1D1A">A note on quality:</strong> this is a compressed screen recording, so the table's modelling and textures look softer and less detailed here than they do in the game itself.</p>
+    </section>
+
+    <section aria-labelledby="table-h" style="margin-bottom: 72px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+      <figure style="flex: 1 1 360px; margin: 0">
+        <img src="assets/577154e626.jpg" alt="Render of the 3D blackjack table: a half-moon wooden table with seven cup holders around a green felt playing surface" style="display: block; width: 100%; height: auto; border-radius: 24px; border: 2px solid #2B2E45; box-shadow: 6px 6px 0 rgba(43,46,69,.12)">
+      </figure>
+      <div style="flex: 1 1 400px">
+        <h2 id="table-h" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 30px; letter-spacing: -1px">the blackjack table</h2>
+        <p style="margin: 0 0 14px; color: #3D372F">With no prior Blender experience, I taught myself the software during the hackathon and modelled the blackjack table independently, without following a tutorial. The model is built from a few clean components: a semicircular wooden base, a raised rail with seven recessed cup holders, and an inset playing surface.</p>
+        <p style="margin: 0; color: #3D372F">For the materials, I applied a wood texture set with colour, normal and roughness maps, so the grain and sheen respond realistically to the game's lighting, and gave the playing surface a deep green felt finish. I then exported the model as an FBX file into our Unity project, where it became the centrepiece of the game.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="team-h" style="margin-bottom: 72px">
+      <h2 id="team-h" style="margin: 0 0 24px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 30px; letter-spacing: -1px">how we split the work</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
+        <div style="background: #E6ECFC; border: 2px solid #2B2E45; border-radius: 22px; padding: 26px; box-shadow: 6px 6px 0 rgba(43,46,69,.12)">
+          <h3 style="margin: 0 0 8px; font-size: 19px">3D art (me)</h3>
+          <p style="margin: 0; font-size: 15px; color: #3D372F">Modelling and texturing the blackjack table in Blender.</p>
+        </div>
+        <div style="background: #CFDEFC; border: 2px solid #2B2E45; border-radius: 22px; padding: 26px; box-shadow: 6px 6px 0 rgba(43,46,69,.12)">
+          <h3 style="margin: 0 0 8px; font-size: 19px">Programming (my partner, with my help)</h3>
+          <p style="margin: 0; font-size: 15px; color: #3D372F">My partner, Efe Battal, wrote the game in Unity. I helped with parts of the blackjack logic.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="background: #E4E2DD; color: #1F1D1A; border: 2px solid #2B2E45; border-radius: 24px; padding: 36px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
+      <div style="flex: 1 1 420px">
+        <h2 style="margin: 0 0 8px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 24px">what I learned</h2>
+        <p style="margin: 0; color: #4A4744">How to pick up an unfamiliar tool quickly and deliver a finished result under a tight deadline. Learning Blender from scratch within 24 hours showed me how much I can teach myself when a project needs it.</p>
+      </div>
+      <a href="projects.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #1F1D1A; color: #FCF6E3; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 15px">all projects →</a>
+    </section>
+  </main>
+</div>
+</template>
+<noscript><p style="font-family: sans-serif; padding: 24px">This site needs JavaScript turned on to show everything.</p></noscript>
+<script src="js/dc.js"></script>
+<script>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+DC.mount(Component, {});
+</script>
+</body>
+</html>

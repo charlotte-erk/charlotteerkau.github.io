@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charlotte Erkau</title>
+<meta name="description" content="Charlotte Erkau: Computer Engineering student at the University of Manitoba working across software, engineering and design.">
+<link rel="icon" href="assets/bdf4886434.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;family=Cedarville+Cursive&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;cursor:url(assets/bdf4886434.svg) 16 16, auto}
+a{color:#1F1D1A}a:hover{opacity:.75}
+button:focus-visible,a:focus-visible{outline:3px solid #3B4FA0;outline-offset:3px}
+.stk img{transition:transform .2s ease;filter:drop-shadow(3px 4px 0 rgba(31,29,26,.12))}
+.stk:hover img{transform:rotate(-5deg) scale(1.07)}
+.stk:active{cursor:grabbing}
+.nv a{color:#1F1D1A;text-decoration:none}
+.nv-plain a:hover{text-decoration:underline;text-underline-offset:7px;text-decoration-thickness:2px}
+.nv-highlight a{background-image:linear-gradient(#CFDEFC,#CFDEFC);background-repeat:no-repeat;background-size:100% 38%;background-position:0 85%;transition:background-size .2s ease}
+.nv-highlight a:hover{background-size:100% 100%;opacity:1}
+.nv-numbered .nvn{font-size:12px;font-weight:700;color:#3B4FA0;margin-right:8px;position:relative;top:-8px}
+.nv-numbered a:hover{text-decoration:underline;text-underline-offset:7px;text-decoration-thickness:2px}
+.nv-brackets .b{color:#3B4FA0;display:inline-block;transition:transform .15s ease}
+.nv-brackets a:hover{opacity:1}
+.nv-brackets a:hover .bl{transform:translateX(-5px)}
+.nv-brackets a:hover .br{transform:translateX(5px)}
+.nv-underline a{padding:8px 14px 6px !important;border-bottom:3px solid #1F1D1A;background-image:linear-gradient(#1F1D1A,#1F1D1A),linear-gradient(#1F1D1A,#1F1D1A),linear-gradient(#1F1D1A,#1F1D1A);background-repeat:no-repeat;background-position:left bottom,right bottom,left top;background-size:3px 0,3px 0,0 3px;transition:background-size .3s ease}
+.nv-underline a:hover,.nv-underline a:focus-visible{background-size:3px 100%,3px 100%,100% 3px;opacity:1}
+.nv-blueline a{border-bottom:6px solid #CFDEFC;padding-bottom:2px !important;transition:border-color .15s ease}
+.nv-blueline a:hover{border-color:#8FA6F0;opacity:1}
+.nv-caps{font-size:17px !important;letter-spacing:.14em;text-transform:uppercase}
+.nv-caps a{border-bottom:2px solid #1F1D1A;padding-bottom:6px !important;transition:color .15s ease,border-color .15s ease}
+.nv-caps a:hover{color:#3B4FA0;border-color:#3B4FA0;opacity:1}
+.nv-slashes{gap:10px 0 !important}
+.nv-slashes a{padding:10px 18px !important;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:7px;text-decoration-color:transparent;transition:text-decoration-color .15s ease}
+.nv-slashes a + a::before{content:"/";position:relative;left:-22px;color:#8FA6F0;font-weight:500;display:inline-block;text-decoration:none}
+.nv-slashes a:hover{text-decoration-color:#1F1D1A;opacity:1}
+.nv-outline{gap:10px 18px !important}
+.nv-outline a{padding:8px 22px !important;border:2px solid #1F1D1A;border-radius:999px;transition:background .15s ease}
+.nv-outline a:hover{background:#1F1D1A;color:#FCF6E3;opacity:1}
+.nv-dots{gap:10px 0 !important}
+.nv-dots a{position:relative;padding:10px 26px !important;transition:color .15s ease}
+.nv-dots a + a::before{content:"";position:absolute;left:-4px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:#8FA6F0}
+.nv-dots a:hover{color:#3B4FA0;opacity:1}
+.nv-bar{width:fit-content;margin:22px auto 0;padding:6px 8px !important;gap:2px !important;border:2px solid #1F1D1A;border-radius:999px;background:#FFFDF7;box-shadow:4px 4px 0 rgba(31,29,26,.12)}
+.nv-bar a{padding:10px 22px !important;border-radius:999px;transition:background .15s ease}
+.nv-bar a:hover{background:#CFDEFC;opacity:1}
+@keyframes spkA{0%{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(0deg)}100%{opacity:0;transform:translate(-50%,10px) scale(.2) rotate(120deg)}}
+@keyframes spkB{0%{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(0deg)}100%{opacity:0;transform:translate(-50%,10px) scale(.2) rotate(120deg)}}
+@media (prefers-reduced-motion: reduce){.spk{display:none}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.caret{display:inline-block;width:.09em;height:1em;margin-left:.06em;vertical-align:-0.13em;background:#1F1D1A;animation:blink 1s step-end infinite}
+@media (prefers-reduced-motion: reduce){.caret{animation:none}}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-template">
+<div onPointerMove="{{trail}}" style="min-height: 100vh; background: linear-gradient(90deg, #CFDEFC 0 26px, #FCF6E3 26px 52px) calc(50% - 13px) top / 52px 100% repeat-x, #FCF6E3; font-family: 'DM Sans', system-ui, sans-serif; color: #1F1D1A">
+  <div style="position: relative; width: min(64%, 1000px); width: calc(round(down, min(64%, 1066px) - 26px, 104px) + 26px); min-width: min(100%, 546px); min-height: 100vh; margin: 0 auto; background: #FCF6E3; display: flex; flex-direction: column; overflow: hidden">
+    <div aria-hidden="true" style="height: 76px; margin: 0 26px; background: repeating-linear-gradient(90deg, #CFDEFC 0 26px, transparent 26px 52px)"></div>
+
+    <nav aria-label="Main" class="nv nv-{{navStyle}}" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px clamp(8px, 2.2vw, 40px); padding: 22px 8px 0; font-family: 'JetBrains Mono', monospace; font-size: clamp(15px, 1.55vw, 20px); font-weight: 700; position: relative; z-index: 30">
+      <sc-for list="{{navLinks}}" as="l" hint-placeholder-count="5">
+        <a href="{{l.href}}" class="nvl" style="padding: 10px 6px"><sc-if value="{{l.num}}" hint-placeholder-val="{{ false }}"><span class="nvn">{{l.num}}</span></sc-if><sc-if value="{{brackets}}" hint-placeholder-val="{{ false }}"><span class="b bl">[</span></sc-if>{{l.label}}<sc-if value="{{brackets}}" hint-placeholder-val="{{ false }}"><span class="b br">]</span></sc-if></a>
+      </sc-for>
+    </nav>
+
+    <div onPointerMove="{{move}}" onPointerUp="{{up}}" onPointerCancel="{{up}}" style="position: relative; flex: 1; min-height: 640px">
+      <h1 style="position: absolute; left: 0; right: 0; top: 40%; transform: translateY(-50%); margin: 0; text-align: center; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: clamp(34px, 4.6vw, 64px); line-height: 1.5; letter-spacing: -1px; color: #2B2926; pointer-events: none; z-index: 1" aria-label="Hello World, I'm Charlotte!"><span style="position: relative; display: inline-block; white-space: nowrap"><span style="visibility: hidden">Hello World,</span><span style="position: absolute; left: 0; top: 0; white-space: nowrap">{{t1}}<sc-if value="{{caret1}}" hint-placeholder-val="{{ false }}"><span class="caret" aria-hidden="true"></span></sc-if></span></span><br><span style="position: relative; display: inline-block; white-space: nowrap"><span style="visibility: hidden">I'm Charlotte!</span><span style="position: absolute; left: 0; top: 0; white-space: nowrap">{{t2}}<sc-if value="{{caret2}}" hint-placeholder-val="{{ false }}"><span class="caret" aria-hidden="true"></span></sc-if></span></span></h1>
+
+      <sc-for list="{{stickers}}" as="s" hint-placeholder-count="6">
+        <button class="stk" onPointerDown="{{s.down}}" onClick="{{s.click}}" aria-label="{{s.alt}}: tap to read, drag to move" style="position: absolute; left: {{s.left}}; top: {{s.top}}; width: {{s.w}}; z-index: {{s.z}}; transform: translate({{s.dx}}px, {{s.dy}}px) rotate({{s.rot}}deg); padding: 0; border: 0; background: transparent; cursor: grab; touch-action: none">
+          <img src="{{s.src}}" alt="" draggable="false" style="display: block; width: 100%; height: auto; pointer-events: none">
+        </button>
+      </sc-for>
+
+      <p style="position: absolute; left: 0; right: 0; bottom: 28px; margin: 0; text-align: center; font-family: 'Cedarville Cursive', cursive; font-size: 24px; color: #6B6B6B; pointer-events: none; z-index: 1">the stickers are draggable, click one to learn more</p>
+
+      <sc-if value="{{note}}" hint-placeholder-val="{{ false }}">
+        <div role="status" style="position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%); width: min(460px, calc(100% - 48px)); z-index: 40; background: #FFFDF7; border: 2px solid #2F3B2E; border-radius: 20px; box-shadow: 6px 6px 0 rgba(47,59,46,.16); padding: 18px 20px 18px 22px; display: flex; gap: 14px; align-items: flex-start">
+          <div style="flex: 1; min-width: 0">
+            <p style="margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 16px">{{note.title}}</p>
+            <p style="margin: 0 0 10px; font-size: 15px; line-height: 1.5; color: #3D372F">{{note.text}}</p>
+            <a href="{{note.href}}" style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700">{{note.cta}} →</a>
+          </div>
+          <button onClick="{{closeNote}}" aria-label="Close note" style="cursor: pointer; flex: none; width: 44px; height: 44px; border-radius: 50%; border: 2px solid #2F3B2E; background: transparent; font-size: 16px; color: #1F1D1A">✕</button>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{moved}}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{tidy}}" style="cursor: pointer; position: absolute; right: 20px; top: 8px; z-index: 35; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 2px solid #1F1D1A; background: #FFFDF7; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; color: #1F1D1A">tidy up ↺</button>
+      </sc-if>
+    </div>
+
+    <div aria-hidden="true" style="height: 76px; margin: 0 26px; background: repeating-linear-gradient(90deg, #CFDEFC 0 26px, transparent 26px 52px)"></div>
+  </div>
+  <sc-for list="{{sparks}}" as="k" hint-placeholder-count="0">
+    <span class="spk" aria-hidden="true" style="position: fixed; left: {{k.x}}px; top: {{k.y}}px; z-index: 9999; pointer-events: none; font-size: {{k.size}}px; line-height: 1; color: {{k.color}}; opacity: 0; animation: {{k.anim}} .75s ease-out forwards">✦</span>
+  </sc-for>
+</div>
+</template>
+<noscript><p style="font-family: sans-serif; padding: 24px">This site needs JavaScript turned on to show everything.</p></noscript>
+<script src="js/dc.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { pos: {}, z: {}, top: 10, note: null, typed: 0 };
+    this.drag = null;
+    this.justDragged = false;
+    this.SLOTS = 14;
+    this.gen = 0;
+    this.lastSpark = 0;
+    this.state.sparks = Array.from({ length: this.SLOTS }, () => ({ x: -100, y: -100, size: 14, color: '#F5B8CC', anim: 'none' }));
+  }
+  componentDidMount() {
+    const total = 12 + 3 + 14;
+    let reduce = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    if (reduce) { this.setState({ typed: total, caretOff: true }); return; }
+    this.typeStart = setTimeout(() => {
+      this.typeTimer = setInterval(() => {
+        const n = this.state.typed + 1;
+        this.setState({ typed: n });
+        if (n >= total) {
+          clearInterval(this.typeTimer);
+          this.caretTimer = setTimeout(() => this.setState({ caretOff: true }), 3000);
+        }
+      }, 95);
+    }, 500);
+  }
+  componentWillUnmount() {
+    clearTimeout(this.typeStart);
+    clearInterval(this.typeTimer);
+    clearTimeout(this.caretTimer);
+  }
+  renderVals() {
+    const defs = [
+      { id: 'women', src: 'assets/78c65760c2.png', alt: 'W.O.M.E.N. patch', left: '7%', top: '12%', w: '15%', rot: -6,
+        title: 'W.O.M.E.N.', text: 'I’m a member of the Women of Manitoba Engineering Network.', href: 'about.html', cta: 'more about me' },
+      { id: 'esp32', src: 'assets/e787945730.png', alt: 'ESP32 dev board', left: '39%', top: '5%', w: '14%', rot: 4,
+        title: 'An ESP32 board', text: 'I used this board in SweepSync, the communication device for deaf curlers my team designed in Digital Systems Design 1.', href: 'sweepsync.html', cta: 'see the project' },
+      { id: 'tama', src: 'assets/dbc2950727.png', alt: 'Tamagotchi keychain', left: '73%', top: '9%', w: '19%', rot: 3,
+        title: 'My virtual pet', text: 'This one lives on my keychain. There’s a digital one you can feed on my contact page.', href: 'contact.html', cta: 'go say hi' },
+      { id: 'umwics', src: 'assets/8b1b6f9456.png', alt: 'UMWiCS sticker', left: '4%', top: '62%', w: '20%', rot: -3,
+        title: 'UMWiCS', text: 'Member of Women in Computer Science at the University of Manitoba.', href: 'about.html', cta: 'more about me' },
+      { id: 'badge', src: 'assets/cee1107e1e.png', alt: 'Soldered LED circuit', left: '43%', top: '63%', w: '15.5%', rot: 8,
+        title: 'My soldered LED circuit', text: 'I built this circuit at a soldering workshop hosted by W.O.M.E.N. (Women of Manitoba Engineering Network). The LED turns on when it’s powered.', href: 'about.html', cta: 'more about me' },
+      { id: 'devhacks', src: 'assets/f3ab04676a.png', alt: 'devHacks 2026 sticker', left: '75%', top: '55%', w: '19%', rot: -5,
+        title: 'devHacks 2026', text: 'My partner and I built a Star Wars-inspired 3D blackjack game in Unity during the 24-hour hackathon.', href: 'celestial-casino.html', cta: 'see the case study' }
+    ];
+    const pos = this.state.pos;
+    const stickers = defs.map(d => {
+      const p = pos[d.id] || { dx: 0, dy: 0 };
+      return {
+        ...d, dx: p.dx, dy: p.dy, z: this.state.z[d.id] || 2,
+        down: (e) => {
+          this.drag = { id: d.id, x0: e.clientX, y0: e.clientY, dx0: p.dx, dy0: p.dy, moved: false };
+          try { e.currentTarget.setPointerCapture(e.pointerId); } catch (err) {}
+          this.setState({ z: { ...this.state.z, [d.id]: this.state.top + 1 }, top: this.state.top + 1 });
+        },
+        click: () => {
+          if (this.justDragged) { this.justDragged = false; return; }
+          this.setState({ note: d });
+        }
+      };
+    });
+    const navStyle = this.props.navStyle ?? 'underline';
+    const navDefs = [['about.html', 'about'], ['projects.html', 'projects'], ['sketchbook.html', 'sketchbook'], ['contact.html', 'contact'], ['#', 'resume ↗']];
+    const navLinks = navDefs.map(([href, label], i) => ({ href, label, num: navStyle === 'numbered' ? '0' + (i + 1) : false }));
+    return {
+      navStyle,
+      navLinks,
+      t1: 'Hello World,'.slice(0, this.state.typed),
+      t2: "I'm Charlotte!".slice(0, Math.max(0, this.state.typed - 15)),
+      caret1: this.state.typed < 15,
+      caret2: this.state.typed >= 15 && !this.state.caretOff,
+      brackets: navStyle === 'brackets',
+      stickers,
+      note: this.state.note || false,
+      moved: Object.keys(pos).length > 0,
+      move: (e) => {
+        const g = this.drag;
+        if (!g) return;
+        const dx = e.clientX - g.x0;
+        const dy = e.clientY - g.y0;
+        if (!g.moved && Math.abs(dx) + Math.abs(dy) < 5) return;
+        g.moved = true;
+        this.setState({ pos: { ...this.state.pos, [g.id]: { dx: g.dx0 + dx, dy: g.dy0 + dy } } });
+      },
+      up: () => {
+        if (this.drag && this.drag.moved) this.justDragged = true;
+        this.drag = null;
+      },
+      sparks: this.state.sparks,
+      trail: (e) => {
+        const now = Date.now();
+        if (now - this.lastSpark < 40) return;
+        this.lastSpark = now;
+        const g = this.gen++;
+        const colors = ['#F5B8CC', '#8FA6F0', '#E9C46A'];
+        const sparks = this.state.sparks.slice();
+        sparks[g % this.SLOTS] = {
+          x: e.clientX + ((g * 7) % 13) - 6,
+          y: e.clientY + ((g * 11) % 13) - 6,
+          size: 10 + ((g * 5) % 9),
+          color: colors[g % colors.length],
+          anim: Math.floor(g / this.SLOTS) % 2 ? 'spkB' : 'spkA'
+        };
+        this.setState({ sparks });
+      },
+      closeNote: () => this.setState({ note: null }),
+      tidy: () => this.setState({ pos: {}, z: {} })
+    };
+  }
+}
+DC.mount(Component, {"navStyle": "underline"});
+</script>
+</body>
+</html>

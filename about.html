@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Charlotte Erkau</title>
+<meta name="description" content="About Charlotte Erkau: skills, experience, coursework and involvement.">
+<link rel="icon" href="assets/bdf4886434.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;family=Cedarville+Cursive&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;cursor:url(assets/a1a898a6dc.svg) 3 2, auto}
+a{color:inherit}a:hover{opacity:.75}
+button:focus-visible,a:focus-visible{outline:3px solid #3B4FA0;outline-offset:3px}
+@keyframes flick{0%,100%{opacity:1}42%{opacity:.86}48%{opacity:.97}73%{opacity:.9}}
+.screenglow{animation:flick 3.2s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.screenglow{animation:none}}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-template">
+<div onPointerMove="{{track}}" style="min-height: 100vh; background: {{t.bg}}; color: {{t.ink}}; font-family: 'DM Sans', system-ui, sans-serif; font-size: 17px; line-height: 1.6; transition: background .4s, color .4s">
+
+  <header style="max-width: 1120px; margin: 0 auto; padding: 28px 32px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between">
+    <a href="index.html" style="font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 20px; text-decoration: none; letter-spacing: -0.5px">charlotte erkau</a>
+    <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 500">
+      <a href="about.html" aria-current="page" style="padding: 10px 14px; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px">about</a>
+      <a href="projects.html" style="padding: 10px 14px; text-decoration: none">projects</a>
+      <a href="sketchbook.html" style="padding: 10px 14px; text-decoration: none">sketchbook</a>
+      <a href="contact.html" style="padding: 10px 14px; text-decoration: none">contact</a>
+      <a href="#" style="padding: 10px 16px; text-decoration: none; border: 2px solid {{t.ink}}; border-radius: 999px; margin-left: 6px">resume ↗</a>
+    </nav>
+  </header>
+
+  <main style="max-width: 1120px; margin: 0 auto; padding: 0 32px">
+
+    <section style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center; padding: 56px 0 80px">
+      <div style="flex: 999 1 520px; min-width: 0">
+        <p style="display: inline-block; margin: 0 0 18px; padding: 5px 14px; border-radius: 999px; border: 2px solid {{t.ink}}; background: {{t.card3}}; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; color: {{t.ink}}">about me</p>
+        <h1 data-star="" style="position: relative; margin: 0 0 24px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: clamp(36px, 4.6vw, 54px); line-height: 1.12; letter-spacing: -1.5px; text-shadow: {{t.glow}}"><img src="{{st.cluster}}" alt="" aria-hidden="true" style="visibility: {{starVis}}; opacity: {{starOp}}; filter: {{starGlow}}; transition: opacity .5s ease; position: absolute; left: -38px; top: -14px; width: 30px; height: 30px; transform: rotate(-12deg)">I make things that are creative, fun, and useful.<img src="{{st.long}}" alt="" aria-hidden="true" style="visibility: {{starVis}}; opacity: {{starOp}}; filter: {{starGlow}}; transition: opacity .5s ease; display: inline-block; width: 26px; height: 26px; margin-left: 10px; vertical-align: top; transform: rotate(14deg)"><img src="{{st.long}}" alt="" aria-hidden="true" style="visibility: {{starVis}}; opacity: {{starOp}}; filter: {{starGlow}}; transition: opacity .5s ease; display: inline-block; width: 15px; height: 15px; margin-left: 2px; vertical-align: super"></h1>
+        <p style="margin: 0 0 16px; max-width: 580px; color: {{t.ink}}">I'm Charlotte, a Computer Engineering student at the University of Manitoba, graduating June 2027. My work spans engineering, software and design: I've built data tools for Manitoba Hydro, games in Unity, Android and web apps, and I'm currently building a garbage-collecting robot for my capstone, sponsored by Volatus Aerospace.</p>
+        <p style="margin: 0 0 32px; max-width: 580px; color: {{t.ink}}">I'm happiest when a project needs both sides of my brain, the technical and the visual. I'm passionate about diversity in engineering and tech, and outside of class I draw people in a figure drawing class and sketch wherever I travel.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+          <a href="projects.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: {{t.ink}}; color: {{t.bg}}; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 15px">see my projects →</a>
+          <a href="contact.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; border: 2px solid {{t.ink}}; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 15px">get in touch</a>
+        </div>
+        <p style="margin: 28px 0 0; display: inline-flex; gap: 10px; align-items: center; padding: 8px 16px; border-radius: 999px; background: {{t.card3}}; font-size: 15px; font-weight: 500"><span aria-hidden="true" style="width: 10px; height: 10px; border-radius: 50%; background: #2E8B57; display: inline-block"></span>Open to internships &amp; new grad roles in engineering, software, design and beyond</p>
+      </div>
+
+      <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; align-items: center; position: relative">
+        <div style="display: flex; gap: 16px; align-items: center; align-self: flex-start; margin: -28px 0 40px -12px">
+          <button onClick="{{toggle}}" aria-pressed="{{lightsOn}}" aria-label="Light switch: toggle the lights" style="cursor: pointer; padding: 0; border: 0; background: transparent; line-height: 0"><img src="{{switchImg}}" alt="" style="display: block; width: 70px; height: auto; filter: {{t.imgFilter}}; transition: filter .4s"></button>
+          <span style="font-family: 'Cedarville Cursive', cursive; font-size: 28px; line-height: 1.3; color: {{t.note}}">{{switchLabel}}</span>
+        </div>
+        <div style="position: relative; width: 100%; max-width: 440px; line-height: 0">
+          <img src="assets/d05209b662.webp" alt="Hand-drawn illustration of Charlotte typing at her desk, feet up" style="width: 100%; height: auto; filter: {{t.imgFilter}}; transition: filter .4s">
+          <sc-if value="{{isOff}}" hint-placeholder-val="{{ false }}">
+            <div class="screenglow" aria-hidden="true" style="position: absolute; top: -30%; bottom: -10%; left: -15%; right: -15%; pointer-events: none; mix-blend-mode: screen; background: conic-gradient(from 0deg at 23.5% 29.9%, rgba(200,224,255,0) 0deg 66deg, rgba(200,224,255,.3) 88deg, rgba(200,224,255,.3) 101deg, rgba(200,224,255,0) 123deg 360deg); -webkit-mask-image: radial-gradient(ellipse 62% 62% at 23.5% 29.9%, #000 15%, transparent 100%); mask-image: radial-gradient(ellipse 62% 62% at 23.5% 29.9%, #000 15%, transparent 100%)"></div>
+            <div class="screenglow" aria-hidden="true" style="position: absolute; top: -30%; bottom: -10%; left: -15%; right: -15%; pointer-events: none; mix-blend-mode: screen; background: radial-gradient(ellipse 3.4% 9.5% at 24.6% 29.6%, rgba(215,232,255,.8), rgba(215,232,255,.3) 60%, rgba(215,232,255,0) 100%), radial-gradient(ellipse 11.5% 14.3% at 70.8% 33.6%, rgba(230,238,255,.55), rgba(230,238,255,.2) 55%, rgba(230,238,255,0) 100%)"></div>
+          </sc-if>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="skills-h" style="padding: 0 0 80px">
+      <h2 id="skills-h" style="margin: 0 0 28px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 32px; letter-spacing: -1px">things I do<img src="{{st.long}}" alt="" aria-hidden="true" style="visibility: {{starVis}}; opacity: {{starOp}}; filter: {{starGlow}}; transition: opacity .5s ease; display: inline-block; width: 18px; height: 18px; margin-left: 8px; vertical-align: super; transform: rotate(10deg)"></h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px">
+        <sc-for list="{{skills}}" as="group" hint-placeholder-count="3">
+          <div style="background: {{group.bg}}; border: 2px solid {{t.line}}; border-radius: 22px; padding: 26px 26px 28px; box-shadow: {{t.cardShadow}}; transition: box-shadow .4s">
+            <h3 style="margin: 0 0 6px; font-family: 'JetBrains Mono', monospace; font-size: 19px; font-weight: 800">{{group.title}}</h3>
+            <p style="margin: 0 0 18px; font-size: 15px; color: {{t.muted}}">{{group.blurb}}</p>
+            <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px">
+              <sc-for list="{{group.items}}" as="s" hint-placeholder-count="5">
+                <li style="padding: 6px 14px; border-radius: 999px; background: {{t.chip}}; color: {{t.chipInk}}; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500">{{s}}</li>
+              </sc-for>
+            </ul>
+          </div>
+        </sc-for>
+      </div>
+      <p style="margin: 20px 0 0; font-size: 15px; color: {{t.muted}}"><strong style="color: {{t.ink}}">Languages:</strong> English (fluent) · French (intermediate; French immersion high school diploma)</p>
+    </section>
+
+
+    <section aria-labelledby="exp-h" style="padding: 0 0 80px">
+      <h2 id="exp-h" style="margin: 0 0 28px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 32px; letter-spacing: -1px">experience<img src="{{st.long}}" alt="" aria-hidden="true" style="visibility: {{starVis}}; opacity: {{starOp}}; filter: {{starGlow}}; transition: opacity .5s ease; display: inline-block; width: 18px; height: 18px; margin-left: 8px; vertical-align: super; transform: rotate(10deg)"></h2>
+      <article style="display: flex; flex-wrap: wrap; gap: 12px 40px; padding: 28px 0; border-top: 2px solid {{t.line}}; border-bottom: 2px solid {{t.line}}">
+        <div style="flex: 1 1 240px">
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 14px; color: {{t.muted}}">May – Aug 2024</p>
+          <h3 style="margin: 4px 0 0; font-size: 21px; font-weight: 700">Manitoba Hydro</h3>
+          <p style="margin: 2px 0 0; font-size: 15px; color: {{t.muted}}">Engineering Co-op, Grid Infrastructure Planning</p>
+        </div>
+        <ul style="flex: 999 1 480px; margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px">
+          <li>Built Python (wxPython) desktop tools that automated data visualization and cut manual data entry for the engineering team.</li>
+          <li>Used Matplotlib to turn raw Excel data into comparison charts the engineers could make decisions from.</li>
+          <li>Wrote the user documentation and reworked the UI layouts based on engineers' feedback.</li>
+        </ul>
+      </article>
+      <article style="display: flex; flex-wrap: wrap; gap: 12px 40px; padding: 28px 0; border-bottom: 2px solid {{t.line}}">
+        <div style="flex: 1 1 240px">
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 14px; color: {{t.muted}}">2019 – 2026</p>
+          <h3 style="margin: 4px 0 0; font-size: 21px; font-weight: 700">Hospitality</h3>
+          <p style="margin: 2px 0 0; font-size: 15px; color: {{t.muted}}">Server, bartender &amp; host · Trans Canada Brewery Co., MR MIKES, Mongo's Grill, The Original Pancake House</p>
+        </div>
+        <ul style="flex: 999 1 480px; margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px">
+          <li>6+ years working with guests in busy restaurants and a taproom, all while I was in school.</li>
+          <li>Worked closely with kitchen, bar and floor teams to keep service running smoothly in fast-paced, high-pressure shifts.</li>
+          <li>Handled guest concerns calmly, and kept orders and payments accurate.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; padding: 0 0 80px">
+      <div style="background: {{t.card2}}; border: 2px solid {{t.line}}; border-radius: 22px; padding: 28px; box-shadow: {{t.boxGlow}}; transition: box-shadow .4s">
+        <h2 style="margin: 0 0 18px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 24px; letter-spacing: -0.5px">relevant coursework<img src="{{st.cluster}}" alt="" aria-hidden="true" style="visibility: {{starVis}}; opacity: {{starOp}}; filter: {{starGlow}}; transition: opacity .5s ease; display: inline-block; width: 18px; height: 18px; margin-left: 8px; vertical-align: super; transform: rotate(10deg)"></h2>
+        <ul style="list-style: none; margin: 0; padding: 0">
+          <sc-for list="{{courses}}" as="c" hint-placeholder-count="6">
+            <li style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px dashed {{t.line}}"><span>{{c.name}}</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: {{t.muted}}; white-space: nowrap">{{c.tag}}</span></li>
+          </sc-for>
+        </ul>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <div style="background: {{t.card3}}; border: 2px solid {{t.line}}; border-radius: 22px; padding: 28px; box-shadow: {{t.boxGlow}}; transition: box-shadow .4s">
+          <h2 style="margin: 0 0 14px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 24px; letter-spacing: -0.5px">awards<img src="{{st.shooting}}" alt="" aria-hidden="true" style="visibility: {{starVis}}; opacity: {{starOp}}; filter: {{starGlow}}; transition: opacity .5s ease; display: inline-block; width: 18px; height: 18px; margin-left: 8px; vertical-align: super; transform: rotate(10deg)"></h2>
+          <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px">
+            <li>Dean's Honour List</li>
+            <li>UM Guertin Centennial Entrance Scholarship</li>
+            <li>Graham Bartley Memorial Scholarship</li>
+          </ul>
+        </div>
+        <div style="background: {{t.card1}}; border: 2px solid {{t.line}}; border-radius: 22px; padding: 28px; box-shadow: {{t.boxGlow}}; transition: box-shadow .4s">
+          <h2 style="margin: 0 0 14px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 24px; letter-spacing: -0.5px">involvement<img src="{{st.long}}" alt="" aria-hidden="true" style="visibility: {{starVis}}; opacity: {{starOp}}; filter: {{starGlow}}; transition: opacity .5s ease; display: inline-block; width: 18px; height: 18px; margin-left: 8px; vertical-align: super; transform: rotate(10deg)"></h2>
+          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
+            <li><strong>excEL: Excellence in Engineering Leadership</strong> · 2026/27 cohort, Price Faculty of Engineering leadership program</li>
+            <li><strong>Women in Engineering &amp; Geoscience Mentorship Program</strong> · mentee for two years (2024/25 and 2026/27), matched with industry professionals</li>
+            <li><strong>UMWiCS</strong> · Women in Computer Science, member</li>
+            <li><strong>W.O.M.E.N.</strong> · Women of Manitoba Engineering Network, member</li>
+            <li><strong>devHacks 2026</strong> · built a 3D casino game inspired by Star Wars in Unity + Blender with a partner</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="border-top: 2px solid {{t.line}}">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 28px 32px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 14px">
+      <span>© 2026 Charlotte Erkau</span>
+      <span style="display: flex; gap: 20px"><a href="https://linkedin.com/in/charlotte-erkau">LinkedIn</a><a href="https://github.com/charlotte-erk">GitHub</a><a href="contact.html">Email</a></span>
+    </div>
+  </footer>
+  <sc-if value="{{isOff}}" hint-placeholder-val="{{ false }}">
+    <div aria-hidden="true" style="position: fixed; left: {{mx}}px; top: {{my}}px; width: 320px; height: 320px; margin: -160px 0 0 -160px; border-radius: 50%; pointer-events: none; z-index: 50; background: radial-gradient(circle, rgba(255,236,170,.30) 0%, rgba(255,236,170,.12) 30%, rgba(255,236,170,0) 68%)"></div>
+    <div aria-hidden="true" style="position: fixed; left: {{mx}}px; top: {{my}}px; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; pointer-events: none; z-index: 51; background: rgba(255,244,205,.95); box-shadow: 0 0 10px 4px rgba(255,230,150,.8), 0 0 28px 10px rgba(255,220,130,.35)"></div>
+  </sc-if>
+</div>
+</template>
+<noscript><p style="font-family: sans-serif; padding: 24px">This site needs JavaScript turned on to show everything.</p></noscript>
+<script src="js/dc.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { lightsOn: !(props.startDark ?? false), mx: -500, my: -500 };
+  }
+  renderVals() {
+    const on = this.state.lightsOn;
+    const calmer = (this.props.palette ?? 'calmer') === 'calmer';
+    const light = calmer ? {
+      bg: '#FCF6E3', ink: '#1F1D1A', muted: '#5C5346', line: '#2B2E45', shadow: 'rgba(43,46,69,.12)',
+      card1: '#E6ECFC', card2: '#FFFDF7', card3: '#CFDEFC', chip: '#F5D6E1', chipInk: '#4A2233',
+      note: '#6B6B6B', glow: 'none', imgFilter: 'none', cardShadow: '6px 6px 0 rgba(43,46,69,.12)', boxGlow: 'none'
+    } : {
+      bg: '#FCF6E3', ink: '#1F1D1A', muted: '#5C5346', line: '#2F3B2E', shadow: 'rgba(47,59,46,.14)',
+      card1: '#DCE8D2', card2: '#FFFDF7', card3: '#CFDEFC', chip: '#EAB9CA', chipInk: '#3A1F2A',
+      note: '#6B6B6B', glow: 'none', imgFilter: 'none', cardShadow: '6px 6px 0 rgba(47,59,46,.14)', boxGlow: 'none'
+    };
+    const dark = {
+      bg: '#0A0B33', ink: '#F5EBD3', muted: '#C4C1E2', line: '#4A4D95', shadow: 'rgba(0,0,0,.35)',
+      card1: '#15183F', card2: '#15183F', card3: '#1E2257',
+      chip: calmer ? '#272C6B' : '#3B2A5C', chipInk: calmer ? '#DCE4FF' : '#F7CFDE',
+      note: '#B4B2BF', glow: '0 0 28px rgba(251,234,176,.45)',
+      imgFilter: 'brightness(.45) sepia(.4) hue-rotate(185deg) saturate(1.6)', cardShadow: '0 0 2px rgba(200,212,255,.9), 0 0 18px rgba(185,200,255,.45), 0 0 40px rgba(185,200,255,.18)', boxGlow: '0 0 2px rgba(200,212,255,.9), 0 0 18px rgba(185,200,255,.45), 0 0 40px rgba(185,200,255,.18)'
+    };
+    const t = on ? light : dark;
+    const starVis = on ? 'hidden' : 'visible';
+    const starOp = on ? 0 : 1;
+    const starGlow = 'drop-shadow(0 0 6px rgba(251,234,176,.9)) drop-shadow(0 0 14px rgba(251,234,176,.5))';
+    const st = on ? {burst: 'assets/1308d7e568.svg', cluster: 'assets/6392a8eb96.svg', dotted: 'assets/a815f9a96b.svg', long: 'assets/0ca27e9f90.svg', outline: 'assets/87c5407749.svg', shooting: 'assets/abb59249f7.svg'} : {burst: 'assets/02286632c1.svg', cluster: 'assets/7abc6d15b8.svg', dotted: 'assets/50acf25646.svg', long: 'assets/b2c0f611ff.svg', outline: 'assets/b165fc2a2c.svg', shooting: 'assets/a6dd2630e1.svg'};
+    return {
+      starVis, starOp, starGlow,
+      st,
+      t,
+      isOff: !on,
+      mx: this.state.mx,
+      my: this.state.my,
+      track: (e) => { if (!this.state.lightsOn) this.setState({ mx: e.clientX, my: e.clientY }); },
+      lightsOn: on ? 'true' : 'false',
+      switchImg: on ? 'assets/31d3faf363.png' : 'assets/fa79f5a31b.png',
+      switchLabel: on ? 'flip the light' : 'lights off: cozy mode',
+      toggle: () => this.setState({ lightsOn: !this.state.lightsOn }),
+      skills: [
+        { title: 'software', blurb: 'What I build with', bg: t.card2,
+          items: ['Python', 'SQL', 'Java', 'JavaScript', 'HTML/CSS', 'C# / C', 'C++'] },
+        { title: 'design & art', blurb: 'Interfaces, research and drawing', bg: t.card1,
+          items: ['Figma', 'UI/UX', 'User research', 'Procreate', 'Figure drawing'] },
+        { title: 'engineering & tools', blurb: 'Building real things', bg: t.card3,
+          items: ['Fusion 360', 'Laser cutting', 'Unity', 'Blender (basics)', 'Git/GitHub', 'Android Studio'] },
+        { title: 'working with people', blurb: 'Teams, leadership and communication', bg: t.card2,
+          items: ['Project management', 'Pitching & presenting', 'Teamwork', 'Technical writing'] }
+      ],
+      courses: [
+        { name: 'Human-Computer Interaction 1', tag: 'design' },
+        { name: 'Human-Computer Interaction 2', tag: 'design' },
+        { name: 'Software Engineering 1', tag: 'software' },
+        { name: 'Database Concepts and Usage', tag: 'software' },
+        { name: 'CS50 SQL, Harvard (online)', tag: 'software' },
+        { name: 'Intro to Artificial Intelligence', tag: 'software' },
+        { name: 'Capstone: Group Design Project', tag: 'engineering' },
+        { name: 'Control Systems', tag: 'engineering' },
+        { name: 'Telecommunications', tag: 'engineering' },
+        { name: 'Digital Systems Design', tag: 'engineering' },
+        { name: 'Figure Study 1', tag: 'fine arts' },
+        { name: 'The Art of the Film 1', tag: 'arts' }
+      ]
+    };
+  }
+}
+DC.mount(Component, {"palette": "calmer", "startDark": false});
+</script>
+</body>
+</html>

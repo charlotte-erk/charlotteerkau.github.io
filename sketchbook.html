@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sketchbook | Charlotte Erkau</title>
+<meta name="description" content="Figure studies and travel sketches by Charlotte Erkau.">
+<link rel="icon" href="assets/bdf4886434.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;family=Cedarville+Cursive&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;cursor:url(assets/fc259550e9.svg) 3 29, auto}
+a{color:#1F1D1A}a:hover{opacity:.75}
+button:focus-visible,a:focus-visible{outline:3px solid #3B4FA0;outline-offset:3px}
+.draw-layer > header,.draw-layer > main{position:relative;z-index:1;pointer-events:none}
+.draw-layer a,.draw-layer button,.draw-layer figure{pointer-events:auto}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-template">
+<div class="draw-layer" style="min-height: 100vh; background: #FCF6E3; color: #1F1D1A; font-family: 'DM Sans', system-ui, sans-serif; font-size: 17px; line-height: 1.6; position: relative">
+  <canvas aria-label="Drawing area: doodle anywhere on the page" onPointerDown="{{pdown}}" onPointerMove="{{pmove}}" onPointerUp="{{pup}}" onPointerCancel="{{pup}}" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; touch-action: none; cursor: url(assets/fc259550e9.svg) 3 29, crosshair"></canvas>
+
+  <header style="max-width: 1120px; margin: 0 auto; padding: 28px 32px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between">
+    <a href="index.html" style="font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 20px; text-decoration: none; letter-spacing: -0.5px">charlotte erkau</a>
+    <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 500">
+      <a href="about.html" style="padding: 10px 14px; text-decoration: none">about</a>
+      <a href="projects.html" style="padding: 10px 14px; text-decoration: none">projects</a>
+      <a href="sketchbook.html" aria-current="page" style="padding: 10px 14px; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px">sketchbook</a>
+      <a href="contact.html" style="padding: 10px 14px; text-decoration: none">contact</a>
+      <a href="#" style="padding: 10px 16px; text-decoration: none; border: 2px solid #1F1D1A; border-radius: 999px; margin-left: 6px">resume ↗</a>
+    </nav>
+  </header>
+
+  <main style="max-width: 1120px; margin: 0 auto; padding: 0 32px 96px">
+    <section style="padding: 56px 0 40px; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end; justify-content: space-between">
+      <div style="max-width: 640px">
+        <p style="display: inline-block; margin: 0 0 18px; padding: 5px 14px; border-radius: 999px; border: 2px solid #1F1D1A; background: #CFDEFC; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; color: #1F1D1A">sketchbook</p>
+        <h1 data-star style="position: relative; margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: clamp(36px, 4.6vw, 54px); line-height: 1.12; letter-spacing: -1.5px">Drawing from life.</h1>
+        <p style="margin: 0; color: #3D372F">Figure studies from my life drawing class and sketches from my travels around Europe. Drawing is a newer passion of mine, and it has quickly changed how I notice colour, proportion and composition in my design work.</p>
+      </div>
+      <a href="contact.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 2px solid #1F1D1A; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px">open to art &amp; illustration work →</a>
+    </section>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: -12px 0 28px">
+      <span style="font-family: 'Cedarville Cursive', cursive; font-size: 26px; color: #6B6B6B">doodle anywhere on the page</span>
+      <button onClick="{{clearDrawing}}" style="cursor: pointer; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 2px solid #1F1D1A; background: #FFFDF7; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; color: #1F1D1A">clear doodles</button>
+    </div>
+
+    <section aria-labelledby="feat-h" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; margin: 0 0 64px; padding: 32px; background: #FFFDF7; border: 2px solid #2B2E45; border-radius: 24px; box-shadow: 6px 6px 0 rgba(43,46,69,.12)">
+      <button onClick="{{openFeatured}}" aria-label="Enlarge: Reaching for the Stars" style="flex: 1 1 340px; max-width: 460px; cursor: zoom-in; padding: 0; border: 0; background: transparent; line-height: 0">
+        <img src="assets/b9b2782c87.jpg" alt="Reaching for the Stars: a seated, compact figure in graphite and blue and purple coloured pencil, surrounded by yellow stars and six dancers in motion drawn in graphite" style="display: block; width: 100%; height: auto; border-radius: 6px; border: 1px solid #DDD6C6">
+      </button>
+      <div style="flex: 999 1 360px; min-width: 0">
+        <p style="display: inline-block; margin: 0 0 14px; padding: 5px 14px; border-radius: 999px; border: 2px solid #1F1D1A; background: #F2D27A; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700">featured · Figure Study 1</p>
+        <h2 id="feat-h" style="margin: 0 0 6px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 32px; letter-spacing: -1px; line-height: 1.15">Reaching for the Stars</h2>
+        <p style="margin: 0 0 18px; font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #5C5346">Graphite pencil and coloured pencil on paper</p>
+        <p style="margin: 0 0 16px; color: #3D372F">A figure study assignment combining figures in motion with an experimental, compact pose.</p>
+        <p style="margin: 0 0 14px; color: #3D372F">Reaching for the stars is an embodiment of pushing yourself to achieve. While the figures around the canvas show a maximum of pushing the body, the centre shows a compact figure in a state of boredom, vagueness or emptiness. The stars, representing what she is supposed to achieve, with their glory shining through, mostly just make her blue.</p>
+        <p style="margin: 0; color: #3D372F">This drawing directs us to finding your purpose while holding on to your sense of self as a youth. The figure at the bottom can be seen reaching for a star, as well as reaching for her true self.</p>
+      </div>
+    </section>
+
+    <div role="group" aria-label="Show collection" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px">
+      <sc-for list="{{tabs}}" as="tb" hint-placeholder-count="3">
+        <button onClick="{{tb.pick}}" aria-pressed="{{tb.pressed}}" style="cursor: pointer; min-height: 44px; padding: 0 20px; border-radius: 999px; border: 2px solid #1F1D1A; background: {{tb.bg}}; color: {{tb.fg}}; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700">{{tb.label}}</button>
+      </sc-for>
+    </div>
+    <p style="margin: -12px 0 28px; color: #3D372F">{{blurb}}</p>
+    <sc-if value="{{travel}}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; margin: 0 0 40px">
+        <figure style="margin: 0; width: 280px; background: #FFFFFF; padding: 10px 10px 12px; border: 1px solid #DDD6C6; box-shadow: 4px 6px 0 rgba(31,29,26,.10); transform: rotate(-2deg); position: relative">
+        <span aria-hidden="true" style="position: absolute; top: -9px; left: 50%; margin-left: -28px; width: 56px; height: 18px; background: rgba(242,201,76,.65); transform: rotate(-4deg)"></span>
+        <img src="assets/37ebae1d8c.jpg" alt="Charlotte in a sunlit sculpture courtyard at the Louvre" style="display: block; width: 100%; height: auto">
+        <figcaption style="margin-top: 8px; text-align: center; font-family: 'Cedarville Cursive', cursive; font-size: 24px; color: #6B6B6B">at the Louvre, Paris</figcaption>
+      </figure>
+        <p style="flex: 1 1 280px; margin: 0; font-family: 'Cedarville Cursive', cursive; font-size: 28px; line-height: 1.3; color: #6B6B6B">I bring a sketchbook everywhere I travel. Here are a few pages from Europe.</p>
+      </div>
+    </sc-if>
+    <div style="column-width: 300px; column-gap: 24px">
+      <sc-for list="{{pieces}}" as="p" hint-placeholder-count="8">
+        <figure style="margin: 0 0 24px; break-inside: avoid">
+          <sc-if value="{{p.src}}" hint-placeholder-val="{{ true }}">
+            <button onClick="{{p.open}}" aria-label="Enlarge: {{p.alt}}" style="cursor: zoom-in; display: block; width: 100%; padding: 10px; box-sizing: border-box; background: #FFFFFF; border: 2px solid #2B2E45; border-radius: 6px; box-shadow: 5px 5px 0 rgba(43,46,69,.12)">
+              <img src="{{p.src}}" alt="{{p.alt}}" loading="lazy" style="display: block; width: 100%; height: auto">
+            </button>
+          </sc-if>
+          <sc-if value="{{p.placeholder}}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: {{p.h}}; padding: 16px; box-sizing: border-box; background: #FFFDF6; border: 2px dashed #2B2E45; border-radius: 6px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">[painting {{p.n}}]</div>
+          </sc-if>
+          <figcaption style="margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">{{p.cap}}</figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </main>
+
+  <sc-if value="{{open}}" hint-placeholder-val="{{ false }}">
+    <div role="dialog" aria-modal="true" aria-label="Enlarged drawing" style="position: fixed; inset: 0; background: rgba(15,14,12,.82); display: flex; align-items: center; justify-content: center; padding: 32px; z-index: 10">
+      <img src="{{open.src}}" alt="{{open.alt}}" style="display: block; max-width: 100%; max-height: 86vh; width: auto; height: auto; background: #FFFFFF; border-radius: 6px; box-shadow: 0 10px 40px rgba(0,0,0,.4)">
+      <button onClick="{{close}}" aria-label="Close" style="cursor: pointer; position: absolute; top: 24px; right: 24px; width: 48px; height: 48px; border-radius: 50%; border: 2px solid #FCF6E3; background: transparent; color: #FCF6E3; font-size: 22px">✕</button>
+    </div>
+  </sc-if>
+</div>
+</template>
+<noscript><p style="font-family: sans-serif; padding: 24px">This site needs JavaScript turned on to show everything.</p></noscript>
+<script src="js/dc.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { open: null, tab: 'life' };
+  }
+  renderVals() {
+    const B = 'assets/';
+    const sets = {
+      life: { label: 'life drawing', blurb: 'Graphite studies from Figure Study 1, my fine arts class.',
+        items: [
+          { src: B + 'a55096c483.jpg', alt: 'Graphite profile portrait of a young man with curly hair', cap: 'portrait study · 30 min · graphite' },
+          { src: B + '28567d13e8.jpg', alt: 'Graphite study of an open hand with fingers curled', cap: 'hand study · 30 min · graphite' },
+          { src: B + '29e7de3865.jpg', alt: 'Graphite study of a closed hand resting on its side', cap: 'hand study · 30 min · graphite' }
+        ] },
+      travel: { label: 'travel sketches', blurb: 'Sketched in pen while travelling around Europe.',
+        items: [
+          { src: B + '1dcbd90945.jpg', alt: 'Pen sketch of the Venus de Milo sculpture', cap: 'Venus de Milo, the Louvre · pen' },
+          { src: B + '1fa7c2cf36.jpg', alt: 'Pen sketch of a palace with a dome and a clock tower', cap: '[place] · pen' },
+          { src: B + '1b718abdbf.jpg', alt: 'Pen sketch of a courtyard with a fountain, columns and potted plants', cap: '[place] · pen' },
+          { src: B + '9d2f6fdefd.jpg', alt: 'Pen sketch of a long hall with a ribbed vaulted ceiling', cap: '[place] · pen' },
+          { src: B + '71911f26c6.jpg', alt: 'Pen sketch of a curving arcade of arches topped with spires', cap: '[place] · pen' },
+          { src: B + '081c045aa7.jpg', alt: 'Pen sketch of three ornate columns', cap: '[place] · pen' },
+          { src: B + '219132a26a.jpg', alt: 'Pen sketch of a tall Gothic tower facade', cap: '[place] · pen' },
+          { src: B + '81878d6f7f.jpg', alt: 'Pen sketch of a tiered fountain with lion statues', cap: '[place] · pen' }
+        ] }
+    };
+    const tab = this.state.tab;
+    const cur = sets[tab];
+    const tabs = Object.keys(sets).map(id => ({
+      label: sets[id].label,
+      pressed: tab === id ? 'true' : 'false',
+      bg: tab === id ? '#1F1D1A' : 'transparent',
+      fg: tab === id ? '#FCF6E3' : '#1F1D1A',
+      pick: () => this.setState({ tab: id, open: null })
+    }));
+    const pieces = cur.items.map((it, i) => ({
+      n: i + 1, cap: it.cap, src: it.src || false, alt: it.alt || '',
+      placeholder: !it.src, h: (it.h || 300) + 'px',
+      open: () => this.setState({ open: { src: it.src, alt: it.alt } })
+    }));
+    const pos = (e) => { const r = this.cv.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; };
+    const pdown = (e) => {
+      const c = e.currentTarget;
+      const r = c.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      const w = Math.round(r.width * dpr), h = Math.round(r.height * dpr);
+      if (c.width !== w || c.height !== h) { c.width = w; c.height = h; }
+      this.cv = c;
+      const ctx = c.getContext('2d');
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+      ctx.strokeStyle = 'rgba(43,43,43,.72)'; ctx.lineWidth = 2.2;
+      this.last = pos(e);
+      this.drawing = true;
+      try { c.setPointerCapture(e.pointerId); } catch (err) {}
+    };
+    const pmove = (e) => {
+      if (!this.drawing || !this.cv) return;
+      const ctx = this.cv.getContext('2d');
+      const p = pos(e);
+      ctx.beginPath(); ctx.moveTo(this.last[0], this.last[1]); ctx.lineTo(p[0], p[1]); ctx.stroke();
+      this.last = p;
+    };
+    const pup = () => { this.drawing = false; };
+    const clearDrawing = () => { if (this.cv) { const ctx = this.cv.getContext('2d'); ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, this.cv.width, this.cv.height); ctx.restore(); } };
+    const openFeatured = () => this.setState({ open: { src: 'assets/b9b2782c87.jpg', alt: 'Reaching for the Stars' } });
+    return { openFeatured, pdown, pmove, pup, clearDrawing, tabs, travel: tab === 'travel', blurb: cur.blurb, pieces, open: this.state.open || false, close: () => this.setState({ open: null }) };
+  }
+}
+DC.mount(Component, {});
+</script>
+</body>
+</html>

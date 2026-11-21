@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SweepSync case study | Charlotte Erkau</title>
+<meta name="description" content="Case study: SweepSync, a communication device for deaf curlers.">
+<link rel="icon" href="assets/bdf4886434.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;cursor:url(assets/a1a898a6dc.svg) 3 2, auto}
+a{color:#1F1D1A}a:hover{opacity:.75}
+button:focus-visible,a:focus-visible{outline:3px solid #3B4FA0;outline-offset:3px}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-template">
+<div style="min-height: 100vh; background: #FCF6E3; color: #1F1D1A; font-family: 'DM Sans', system-ui, sans-serif; font-size: 17px; line-height: 1.65">
+
+  <header style="max-width: 1120px; margin: 0 auto; padding: 28px 32px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between">
+    <a href="index.html" style="font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 20px; text-decoration: none; letter-spacing: -0.5px">charlotte erkau</a>
+    <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 500">
+      <a href="about.html" style="padding: 10px 14px; text-decoration: none">about</a>
+      <a href="projects.html" aria-current="page" style="padding: 10px 14px; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px">projects</a>
+      <a href="sketchbook.html" style="padding: 10px 14px; text-decoration: none">sketchbook</a>
+      <a href="contact.html" style="padding: 10px 14px; text-decoration: none">contact</a>
+      <a href="#" style="padding: 10px 16px; text-decoration: none; border: 2px solid #1F1D1A; border-radius: 999px; margin-left: 6px">resume ↗</a>
+    </nav>
+  </header>
+
+  <main style="max-width: 1120px; margin: 0 auto; padding: 0 32px 96px">
+    <a href="projects.html" style="display: inline-flex; align-items: center; min-height: 44px; margin-top: 24px; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; text-decoration: none">← all projects</a>
+
+    <section style="padding: 24px 0 40px; max-width: 800px">
+      <p style="display: inline-block; margin: 0 0 18px; padding: 5px 14px; border-radius: 999px; border: 2px solid #1F1D1A; background: #CFDEFC; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; color: #1F1D1A">case study · UX &amp; accessibility</p>
+      <h1 data-star style="position: relative; margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.12; letter-spacing: -1.5px">SweepSync: making curling calls visible</h1>
+      <p style="margin: 0; color: #3D372F">In curling, the skip shouts commands down the ice and the sweepers react. Players who are deaf or hard of hearing can miss those calls. SweepSync is a broom-mounted device that turns each command into a light pattern, so everyone on the team is part of the conversation. My focus was the concept design, the UX/UI and accessibility.</p>
+    </section>
+
+    <dl style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; margin: 0 0 56px; border-top: 2px solid #2F3B2E; border-bottom: 2px solid #2F3B2E">
+      <div style="padding: 20px 20px 20px 0"><dt style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">my focus</dt><dd style="margin: 4px 0 0; font-weight: 700">Concept, UX/UI &amp; accessibility</dd></div>
+      <div style="padding: 20px"><dt style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">also</dt><dd style="margin: 4px 0 0; font-weight: 700">3D modelling, testing, the deck &amp; presenting</dd></div>
+      <div style="padding: 20px"><dt style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">course</dt><dd style="margin: 4px 0 0; font-weight: 700">Digital Systems Design 1</dd></div>
+      <div style="padding: 20px"><dt style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">team</dt><dd style="margin: 4px 0 0; font-weight: 700">5 students</dd></div>
+    </dl>
+
+    <section aria-labelledby="cmd-h" style="margin-bottom: 72px">
+      <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; margin-bottom: 20px">
+        <h2 id="cmd-h" style="margin: 0; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 30px; letter-spacing: -1px">five commands, five patterns</h2>
+        <div role="group" aria-label="Choose a command" style="display: flex; flex-wrap: wrap; gap: 8px">
+          <sc-for list="{{cmds}}" as="c" hint-placeholder-count="5">
+            <button onClick="{{c.pick}}" aria-pressed="{{c.pressed}}" style="cursor: pointer; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 2px solid #1F1D1A; background: {{c.bg}}; color: {{c.fg}}; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700">{{c.label}}</button>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; background: #FFFDF7; border: 2px solid #2F3B2E; border-radius: 24px; padding: 24px">
+        <img src="{{cur.src}}" alt="{{cur.alt}}" style="flex: 999 1 520px; min-width: 0; width: 100%; max-width: 680px; height: auto; border-radius: 12px; border: 2px solid #2F3B2E">
+        <div style="flex: 1 1 260px">
+          <p style="margin: 0 0 8px; font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 800">{{cur.label}}</p>
+          <p style="margin: 0; color: #3D372F">{{cur.text}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="dec-h" style="margin-bottom: 72px">
+      <h2 id="dec-h" style="margin: 0 0 24px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 30px; letter-spacing: -1px">design decisions</h2>
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
+        <li style="background: #E6ECFC; border: 2px solid #2B2E45; border-radius: 22px; padding: 26px; box-shadow: 6px 6px 0 rgba(43,46,69,.12)">
+          <span style="font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 15px; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #2B2E45; color: #FCF6E3">01</span>
+          <h3 style="margin: 8px 0 8px; font-size: 19px">Buttons ordered by effort</h3>
+          <p style="margin: 0; font-size: 15px; color: #3D372F">The controller's buttons run from Stop at the bottom to Hard at the top. Stop sits where the thumb naturally rests, for quick and safe access, while Hard is furthest away to mirror the greater effort it asks for. Tactile buttons let the skip press without looking.</p>
+        </li>
+        <li style="background: #FFFDF7; border: 2px solid #2B2E45; border-radius: 22px; padding: 26px; box-shadow: 6px 6px 0 rgba(43,46,69,.12)">
+          <span style="font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 15px; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #2B2E45; color: #FCF6E3">02</span>
+          <h3 style="margin: 8px 0 8px; font-size: 19px">Colour that works for everyone</h3>
+          <p style="margin: 0; font-size: 15px; color: #3D372F">I chose the colour scheme by checking it against red-green, blue-yellow and complete colour blindness. Each command has its own colour, and Left and Right are also told apart by which half of the bar lights up, so no call depends on colour alone.</p>
+        </li>
+        <li style="background: #CFDEFC; border: 2px solid #2B2E45; border-radius: 22px; padding: 26px; box-shadow: 6px 6px 0 rgba(43,46,69,.12)">
+          <span style="font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 15px; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #2B2E45; color: #FCF6E3">03</span>
+          <h3 style="margin: 8px 0 8px; font-size: 19px">Readable on the ice</h3>
+          <p style="margin: 0; font-size: 15px; color: #3D372F">Most commands light every LED so they can be seen mid-sweep, and the LEDs stand out against white ice. A removable diffuser in the enclosure lets the brightness be tuned without reprinting the case.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="poster-h" style="margin-bottom: 72px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+      <figure style="flex: 1 1 300px; max-width: 420px; margin: 0">
+        <img src="assets/8716f725a6.jpg" alt="SweepSync Curling Device poster: bold red background with periwinkle stars, a curling stone, a curling house target, and short text explaining how the LED system replaces voice commands" style="display: block; width: 100%; height: auto; border-radius: 12px; border: 2px solid #2B2E45; box-shadow: 6px 6px 0 rgba(43,46,69,.12)">
+      </figure>
+      <div style="flex: 999 1 360px">
+        <h2 id="poster-h" style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 30px; letter-spacing: -1px">the poster</h2>
+        <p style="margin: 0 0 14px; color: #3D372F">I designed the project poster within the course's word count and layout requirements. I wanted the colours to be noticeable, so I chose a bold red background with periwinkle stars that would stand out to someone passing by. I then based the design of our final presentation on the poster, carrying its colours, shapes and style through every slide.</p>
+        <p style="margin: 0; color: #3D372F">With so few words allowed, the headline and two short text blocks had to carry the whole idea: what the device does, and who it is for.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="ux-h" style="margin-bottom: 72px">
+      <h2 id="ux-h" style="margin: 0 0 24px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 30px; letter-spacing: -1px">from the presentation</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px">
+        <figure style="margin: 0">
+          <img src="assets/f6d80b942b.png" alt="UX/UI: Controller slide explaining the bottom-to-top button order, from Stop at the thumb to Hard at the top" style="display: block; width: 100%; height: auto; border-radius: 12px; border: 2px solid #2F3B2E">
+          <figcaption style="margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">UX/UI: the controller</figcaption>
+        </figure>
+        <figure style="margin: 0">
+          <img src="assets/2cf3fb73a0.png" alt="UX/UI: Receiver slide showing colour wheels as seen with different types of colour blindness, and the colour and pattern scheme" style="display: block; width: 100%; height: auto; border-radius: 12px; border: 2px solid #2F3B2E">
+          <figcaption style="margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">UX/UI: the receiver and colour-blindness research</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section style="background: #E4E2DD; color: #1F1D1A; border: 2px solid #2B2E45; border-radius: 24px; padding: 36px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
+      <div style="flex: 1 1 420px">
+        <h2 style="margin: 0 0 8px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 24px">next steps</h2>
+        <p style="margin: 0; color: #4A4744">Run focus groups with curlers to test how well the patterns and colours read in play, and add feedback on the controller so the skip knows a command was received.</p>
+      </div>
+      <a href="projects.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #1F1D1A; color: #FCF6E3; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 15px">all projects →</a>
+    </section>
+  </main>
+</div>
+</template>
+<noscript><p style="font-family: sans-serif; padding: 24px">This site needs JavaScript turned on to show everything.</p></noscript>
+<script src="js/dc.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { cmd: 'hard' };
+  }
+  renderVals() {
+    const list = [
+      { id: 'hard', label: 'Hard', src: 'assets/80bd409e14.png', alt: 'Hard command: all eight LEDs blue, top controller button pressed', text: 'Every LED lights blue. Hard is the top button, furthest from the thumb.' },
+      { id: 'left', label: 'Left', src: 'assets/17b3098efe.png', alt: 'Left command: half of the LED bar lit green', text: 'Half of the bar lights green. The position of the lit half shows the direction, not just the colour.' },
+      { id: 'right', label: 'Right', src: 'assets/a5f3e660e7.png', alt: 'Right command: the opposite half of the LED bar lit green', text: 'The opposite half lights green, so Left and Right stay distinct even without seeing colour.' },
+      { id: 'clean', label: 'Clean', src: 'assets/eb41cd395a.png', alt: 'Clean command: all eight LEDs yellow', text: 'Every LED lights yellow.' },
+      { id: 'stop', label: 'Stop', src: 'assets/1c2944af10.png', alt: 'Stop command: all eight LEDs red, bottom controller button pressed', text: 'Every LED lights red. Stop is the bottom button, right where the thumb rests.' }
+    ];
+    const k = this.state.cmd;
+    return {
+      cur: list.find(c => c.id === k),
+      cmds: list.map(c => ({
+        label: c.label,
+        pressed: k === c.id ? 'true' : 'false',
+        bg: k === c.id ? '#1F1D1A' : 'transparent',
+        fg: k === c.id ? '#FCF6E3' : '#1F1D1A',
+        pick: () => this.setState({ cmd: c.id })
+      }))
+    };
+  }
+}
+DC.mount(Component, {});
+</script>
+</body>
+</html>

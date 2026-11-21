@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cycle Wise case study | Charlotte Erkau</title>
+<meta name="description" content="Case study: the UI redesign of Cycle Wise, an Android period tracking app.">
+<link rel="icon" href="assets/bdf4886434.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;family=Cedarville+Cursive&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;cursor:url(assets/a1a898a6dc.svg) 3 2, auto}
+a{color:#1F1D1A}a:hover{opacity:.75}
+button:focus-visible,a:focus-visible{outline:3px solid #3B4FA0;outline-offset:3px}
+</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-template">
+<div style="min-height: 100vh; background: #FCF6E3; color: #1F1D1A; font-family: 'DM Sans', system-ui, sans-serif; font-size: 17px; line-height: 1.65">
+
+  <header style="max-width: 1120px; margin: 0 auto; padding: 28px 32px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between">
+    <a href="index.html" style="font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 20px; text-decoration: none; letter-spacing: -0.5px">charlotte erkau</a>
+    <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 500">
+      <a href="about.html" style="padding: 10px 14px; text-decoration: none">about</a>
+      <a href="projects.html" aria-current="page" style="padding: 10px 14px; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px">projects</a>
+      <a href="sketchbook.html" style="padding: 10px 14px; text-decoration: none">sketchbook</a>
+      <a href="contact.html" style="padding: 10px 14px; text-decoration: none">contact</a>
+      <a href="#" style="padding: 10px 16px; text-decoration: none; border: 2px solid #1F1D1A; border-radius: 999px; margin-left: 6px">resume ↗</a>
+    </nav>
+  </header>
+
+  <main style="max-width: 1120px; margin: 0 auto; padding: 0 32px 96px">
+    <a href="projects.html" style="display: inline-flex; align-items: center; min-height: 44px; margin-top: 24px; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; text-decoration: none">← all projects</a>
+
+    <section style="padding: 24px 0 40px; max-width: 800px">
+      <p style="display: inline-block; margin: 0 0 18px; padding: 5px 14px; border-radius: 999px; border: 2px solid #1F1D1A; background: #CFDEFC; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700; color: #1F1D1A">case study · UI redesign</p>
+      <h1 data-star style="position: relative; margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.12; letter-spacing: -1.5px">Cycle Wise: redesigning a period tracker</h1>
+      <p style="margin: 0; color: #3D372F">Cycle Wise is an Android period tracking app built in collaboration with a team of five women in Software Engineering 1. As users of period tracking apps ourselves, we drew on our own experiences and on the needs of other users to understand what people want from this kind of app. I joined the project once the initial concept and basic period logging were in place, and focused on strengthening both the design and the way the team worked: I led the UI redesign, giving the app a consistent, approachable identity, and reorganized our Git workflow so the team could collaborate cleanly.</p>
+    </section>
+
+    <dl style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; margin: 0 0 56px; border-top: 2px solid #2F3B2E; border-bottom: 2px solid #2F3B2E">
+      <div style="padding: 20px 20px 20px 0"><dt style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">my role</dt><dd style="margin: 4px 0 0; font-weight: 700">UI design &amp; front end</dd></div>
+      <div style="padding: 20px"><dt style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">course</dt><dd style="margin: 4px 0 0; font-weight: 700">Software Engineering 1</dd></div>
+      <div style="padding: 20px"><dt style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">team</dt><dd style="margin: 4px 0 0; font-weight: 700">5 students</dd></div>
+      <div style="padding: 20px"><dt style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">platform</dt><dd style="margin: 4px 0 0; font-weight: 700">Android</dd></div>
+    </dl>
+
+    <section aria-labelledby="ba-h" style="margin-bottom: 72px">
+      <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; margin-bottom: 20px">
+        <h2 id="ba-h" style="margin: 0; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 30px; letter-spacing: -1px">before → after</h2>
+        <div role="group" aria-label="Show version" style="display: inline-flex; padding: 4px; border: 2px solid #1F1D1A; border-radius: 999px; background: #FFFDF7">
+          <sc-for list="{{views}}" as="v" hint-placeholder-count="2">
+            <button onClick="{{v.pick}}" aria-pressed="{{v.pressed}}" style="cursor: pointer; min-height: 44px; min-width: 96px; padding: 0 18px; border: 0; border-radius: 999px; background: {{v.bg}}; color: {{v.fg}}; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700">{{v.label}}</button>
+          </sc-for>
+        </div>
+      </div>
+      <div style="background: {{shot.tint}}; border: 2px solid #2F3B2E; border-radius: 24px; padding: 36px 24px; display: flex; flex-wrap: wrap; gap: 28px; justify-content: center; transition: background .3s">
+        <sc-for list="{{screens}}" as="s" hint-placeholder-count="3">
+          <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; gap: 12px">
+            <img src="{{s.src}}" alt="{{s.alt}}" style="display: block; height: 440px; width: auto">
+            <figcaption style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700">{{s.label}}</figcaption>
+          </figure>
+        </sc-for>
+      </div>
+      <p style="margin: 14px 0 0; font-family: 'Cedarville Cursive', cursive; font-size: 24px; color: #6B6B6B">{{shot.note}}</p>
+    </section>
+
+    <section aria-labelledby="proc-h" style="margin-bottom: 72px">
+      <h2 id="proc-h" style="margin: 0 0 24px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 30px; letter-spacing: -1px">my process</h2>
+      <ol style="margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 14px; max-width: 820px">
+        <li><strong>Started from user needs:</strong> as a team, we discussed what users look for in a period tracker and agreed the app should be simple to use, consistent from screen to screen, and welcoming to use every day.</li>
+        <li><strong>Explored three layout concepts</strong> and selected the card-based layout for its clarity.</li>
+        <li><strong>Built a colour system</strong> designed to match the feel of the app, feminine and fun while remaining calm and easy to read: a pale pink background, a mid pink for headings and secondary buttons, and a deep raspberry for primary actions like Save Log.</li>
+        <li><strong>Chose the font with care:</strong> I compared a wide range of fonts before choosing Nunito, which felt clear and easy to read while still calm and gentle. I then applied it consistently across the entire app through the shared theme.</li>
+        <li><strong>Designed the logo:</strong> a crescent moon with stars, chosen to represent the phases of the moon alongside the phases of the menstrual cycle.</li>
+        <li><strong>Restyled every screen to match:</strong> Log Period, Saved Logs, Prediction, Login and Register.</li>
+        <li><strong>Replaced the old navigation buttons</strong> with a bottom navigation bar so users can move between Log, History and Predict from anywhere.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="changes-h" style="margin-bottom: 72px">
+      <h2 id="changes-h" style="margin: 0 0 24px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 30px; letter-spacing: -1px">what I changed &amp; why</h2>
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
+        <li style="background: #FFFDF7; border: 2px solid #2F3B2E; border-radius: 22px; padding: 26px">
+          <span style="font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 32px; color: #3B4FA0">01</span>
+          <h3 style="margin: 8px 0 8px; font-size: 19px">Grouped the form into cards</h3>
+          <p style="margin: 0; font-size: 15px; color: #3D372F">Each input now sits in its own card with a clear label, so logging a period reads as a short series of steps instead of one long list.</p>
+        </li>
+        <li style="background: #FFFDF7; border: 2px solid #2F3B2E; border-radius: 22px; padding: 26px">
+          <span style="font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 32px; color: #3B4FA0">02</span>
+          <h3 style="margin: 8px 0 8px; font-size: 19px">Made choices one tap</h3>
+          <p style="margin: 0; font-size: 15px; color: #3D372F">Flow went from a dropdown to Light, Medium and Heavy buttons, so every option is visible at once and takes a single tap.</p>
+        </li>
+        <li style="background: #FFFDF7; border: 2px solid #2F3B2E; border-radius: 22px; padding: 26px">
+          <span style="font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 32px; color: #3B4FA0">03</span>
+          <h3 style="margin: 8px 0 8px; font-size: 19px">Gave it an identity</h3>
+          <p style="margin: 0; font-size: 15px; color: #3D372F">I replaced the default purple with a soft pink palette and the rounded Nunito font, and added the Cycle Wise name and a crescent moon logo, so the app feels feminine and fun while remaining consistent and simple to use.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="evo-h" style="margin-bottom: 72px">
+      <h2 id="evo-h" style="margin: 0 0 8px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 30px; letter-spacing: -1px">how it evolved</h2>
+      <p style="margin: 0 0 24px; color: #3D372F">How the Log screen developed through four rounds of refinement.</p>
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px">
+        <sc-for list="{{evo}}" as="e" hint-placeholder-count="4">
+          <li style="display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center">
+            <img src="{{e.src}}" alt="{{e.alt}}" style="display: block; width: 100%; max-width: 210px; height: auto">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5C5346">{{e.date}}</span>
+            <span style="font-weight: 700; font-size: 15px">{{e.label}}</span>
+          </li>
+        </sc-for>
+      </ol>
+    </section>
+
+    <section aria-labelledby="new-h" style="margin-bottom: 72px">
+      <h2 id="new-h" style="margin: 0 0 8px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 30px; letter-spacing: -1px">more screens</h2>
+      <p style="margin: 0 0 24px; max-width: 760px; color: #3D372F">The empty Predict screen became an Overview showing the current cycle phase, the next period, the average cycle length and tips for the day, and the login screen got the full Cycle Wise branding.</p>
+      <div style="background: #F5D6E1; border: 2px solid #2F3B2E; border-radius: 24px; padding: 36px 24px; display: flex; flex-wrap: wrap; gap: 28px; justify-content: center">
+        <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; gap: 12px">
+          <img src="assets/e6e2e6e637.png" alt="Overview screen showing the premenstrual phase on a five-step cycle timeline, next period and average cycle cards, and tips for today" style="display: block; height: 440px; width: auto">
+          <figcaption style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700">overview</figcaption>
+        </figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; gap: 12px">
+          <img src="assets/02c41f3751.png" alt="Cycle Wise login screen with the moon logo" style="display: block; height: 440px; width: auto">
+          <figcaption style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700">login</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section aria-labelledby="eng-h" style="margin-bottom: 72px">
+      <h2 id="eng-h" style="margin: 0 0 24px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 30px; letter-spacing: -1px">engineering &amp; teamwork</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
+        <div style="background: #FFFDF7; border: 2px solid #2F3B2E; border-radius: 22px; padding: 26px">
+          <h3 style="margin: 0 0 10px; font-size: 19px">Git workflow for the team</h3>
+          <p style="margin: 0; font-size: 15px; color: #3D372F">When I joined, the repository's branches were disorganized, and the .gitignore files were tracking each computer's local files, so every push carried machine-specific changes. I restructured the branches, fixed the .gitignore files, and wrote a document detailing our branch layout (main, dev, feature and task branches), merge request rules and commit conventions. I also helped teammates build good Git habits, which kept the repository clean for the rest of the project.</p>
+        </div>
+        <div style="background: #FFFDF7; border: 2px solid #2F3B2E; border-radius: 22px; padding: 26px">
+          <h3 style="margin: 0 0 10px; font-size: 19px">Front end, testing &amp; documentation</h3>
+          <p style="margin: 0; font-size: 15px; color: #3D372F">I implemented the redesign in Java and XML: Material components, a shared theme and colour resources, and a bottom navigation bar wired into each screen. When I replaced the flow dropdown with Light, Medium and Heavy buttons, I built that front end myself. I also contributed to integration testing and helped write the project documentation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="background: #E4E2DD; color: #1F1D1A; border: 2px solid #2B2E45; border-radius: 24px; padding: 36px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
+      <div style="flex: 1 1 420px">
+        <h2 style="margin: 0 0 8px; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 24px">what I learned</h2>
+        <p style="margin: 0; color: #4A4744">How to collaborate effectively on a larger-scale software project as part of a team, from keeping a shared codebase organized to coordinating work across five people. I also learned how to establish a cohesive visual identity for a product and apply it consistently across every screen, while keeping the needs of users at the centre of each design decision.</p>
+      </div>
+      <a href="projects.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #1F1D1A; color: #FCF6E3; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 15px">next project →</a>
+    </section>
+  </main>
+</div>
+</template>
+<noscript><p style="font-family: sans-serif; padding: 24px">This site needs JavaScript turned on to show everything.</p></noscript>
+<script src="js/dc.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { view: 'after' };
+  }
+  renderVals() {
+    const v = this.state.view;
+    const sets = {
+      before: {
+        tint: '#E4DCCB', note: 'the first version: default purple components and an empty Predict screen',
+        screens: [
+          { label: 'log a period', src: 'assets/e7314c70db.png', alt: 'First version of the Log screen: purple buttons and a dropdown for flow' },
+          { label: 'history', src: 'assets/26211c8846.png', alt: 'First version of the Saved Logs screen: plain text entries with purple Delete buttons' },
+          { label: 'predict', src: 'assets/e5f8ca4f40.png', alt: 'First version of the Predict screen: a purple screen reading No data to predict' }
+        ]
+      },
+      after: {
+        tint: '#F5D6E1', note: 'after my redesign: one visual language across every screen',
+        screens: [
+          { label: 'log a period', src: 'assets/24f37f54ce.png', alt: 'Redesigned Log Period screen with each input in its own card and pill buttons for flow' },
+          { label: 'history', src: 'assets/85ee8718be.png', alt: 'Redesigned Saved Logs screen with each log in a white card' },
+          { label: 'overview', src: 'assets/e6e2e6e637.png', alt: 'Overview screen with the current cycle phase, next period, average cycle and tips' }
+        ]
+      }
+    };
+    const cur = sets[v];
+    return {
+      shot: { tint: cur.tint, note: cur.note },
+      screens: cur.screens,
+      views: ['before', 'after'].map(id => ({
+        label: id,
+        pressed: v === id ? 'true' : 'false',
+        bg: v === id ? '#1F1D1A' : 'transparent',
+        fg: v === id ? '#FCF6E3' : '#1F1D1A',
+        pick: () => this.setState({ view: id })
+      })),
+      evo: [
+        { date: 'Mar 20', label: 'Default first version', src: 'assets/e7314c70db.png', alt: 'Log screen, March 20: default purple components' },
+        { date: 'Mar 29', label: 'Cards, pink palette, pill buttons', src: 'assets/d3ceb94e4b.png', alt: 'Log screen, March 29: inputs in cards with pink pill buttons and symptom chips' },
+        { date: 'Apr 2', label: 'Softer, rounded font', src: 'assets/4fc5a90256.png', alt: 'Log screen, April 2: rounded font and sentence-case labels' },
+        { date: 'Apr 3', label: 'Logo and reminders tab', src: 'assets/24f37f54ce.png', alt: 'Log screen, April 3: moon logo and a fourth tab for reminders' }
+      ]
+    };
+  }
+}
+DC.mount(Component, {});
+</script>
+</body>
+</html>
