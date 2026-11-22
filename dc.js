@@ -55,6 +55,9 @@
     });
   }
 
+  // Only <template> elements hold their children in .content; other elements
+  // (newer Chrome gives <canvas> a .content property) use their own child nodes.
+  function kids(t) { return t instanceof HTMLTemplateElement ? t.content : t; }
   function renderNodes(tplParent, scope, out) {
     for (const n of tplParent.childNodes) renderNode(n, scope, out);
     return out;
@@ -67,7 +70,7 @@
     if (tag === 'sc-if') {
       const m = WHOLE.exec(t.getAttribute('value') || '');
       const v = m ? lookup(m[1], scope) : false;
-      if (v) renderNodes(t.content || t, scope, out);
+      if (v) renderNodes(kids(t), scope, out);
       return;
     }
     if (tag === 'sc-for') {
@@ -103,7 +106,7 @@
       if (v === true) v = '';
       el.setAttribute(name, String(v));
     }
-    renderNodes(t.content || t, scope, []).forEach((c) => el.appendChild(c));
+    renderNodes(kids(t), scope, []).forEach((c) => el.appendChild(c));
     out.push(el);
   }
 
