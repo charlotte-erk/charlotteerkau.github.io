@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cycle Wise case study | Charlotte Erkau</title>
 <meta name="description" content="Case study: the UI redesign of Cycle Wise, an Android period tracking app.">
-<link rel="icon" href="assets/bdf4886434.svg" type="image/svg+xml">
+<link rel="icon" href="bdf4886434.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;family=Cedarville+Cursive&amp;display=swap" rel="stylesheet">
 <style>
-body{margin:0;cursor:url(assets/a1a898a6dc.svg) 3 2, auto}
+body{margin:0;cursor:url(a1a898a6dc.svg) 3 2, auto}
 a{color:#1F1D1A}a:hover{opacity:.75}
 button:focus-visible,a:focus-visible{outline:3px solid #3B4FA0;outline-offset:3px}
 </style>
@@ -119,11 +119,11 @@ button:focus-visible,a:focus-visible{outline:3px solid #3B4FA0;outline-offset:3p
       <p style="margin: 0 0 24px; max-width: 760px; color: #3D372F">The empty Predict screen became an Overview showing the current cycle phase, the next period, the average cycle length and tips for the day, and the login screen got the full Cycle Wise branding.</p>
       <div style="background: #F5D6E1; border: 2px solid #2F3B2E; border-radius: 24px; padding: 36px 24px; display: flex; flex-wrap: wrap; gap: 28px; justify-content: center">
         <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; gap: 12px">
-          <img src="assets/e6e2e6e637.png" alt="Overview screen showing the premenstrual phase on a five-step cycle timeline, next period and average cycle cards, and tips for today" style="display: block; height: 440px; width: auto">
+          <img src="e6e2e6e637.png" alt="Overview screen showing the premenstrual phase on a five-step cycle timeline, next period and average cycle cards, and tips for today" style="display: block; height: 440px; width: auto">
           <figcaption style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700">overview</figcaption>
         </figure>
         <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; gap: 12px">
-          <img src="assets/02c41f3751.png" alt="Cycle Wise login screen with the moon logo" style="display: block; height: 440px; width: auto">
+          <img src="02c41f3751.png" alt="Cycle Wise login screen with the moon logo" style="display: block; height: 440px; width: auto">
           <figcaption style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700">login</figcaption>
         </figure>
       </div>
@@ -154,7 +154,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #3B4FA0;outline-offset:3p
 </div>
 </template>
 <noscript><p style="font-family: sans-serif; padding: 24px">This site needs JavaScript turned on to show everything.</p></noscript>
-<script src="js/dc.js"></script>
+<script src="dc.js"></script>
 <script>
 class Component extends DCLogic {
   constructor(props) {
@@ -167,17 +167,17 @@ class Component extends DCLogic {
       before: {
         tint: '#E4DCCB', note: 'the first version: default purple components and an empty Predict screen',
         screens: [
-          { label: 'log a period', src: 'assets/e7314c70db.png', alt: 'First version of the Log screen: purple buttons and a dropdown for flow' },
-          { label: 'history', src: 'assets/26211c8846.png', alt: 'First version of the Saved Logs screen: plain text entries with purple Delete buttons' },
-          { label: 'predict', src: 'assets/e5f8ca4f40.png', alt: 'First version of the Predict screen: a purple screen reading No data to predict' }
+          { label: 'log a period', src: 'e7314c70db.png', alt: 'First version of the Log screen: purple buttons and a dropdown for flow' },
+          { label: 'history', src: '26211c8846.png', alt: 'First version of the Saved Logs screen: plain text entries with purple Delete buttons' },
+          { label: 'predict', src: 'e5f8ca4f40.png', alt: 'First version of the Predict screen: a purple screen reading No data to predict' }
         ]
       },
       after: {
         tint: '#F5D6E1', note: 'after my redesign: one visual language across every screen',
         screens: [
-          { label: 'log a period', src: 'assets/24f37f54ce.png', alt: 'Redesigned Log Period screen with each input in its own card and pill buttons for flow' },
-          { label: 'history', src: 'assets/85ee8718be.png', alt: 'Redesigned Saved Logs screen with each log in a white card' },
-          { label: 'overview', src: 'assets/e6e2e6e637.png', alt: 'Overview screen with the current cycle phase, next period, average cycle and tips' }
+          { label: 'log a period', src: '24f37f54ce.png', alt: 'Redesigned Log Period screen with each input in its own card and pill buttons for flow' },
+          { label: 'history', src: '85ee8718be.png', alt: 'Redesigned Saved Logs screen with each log in a white card' },
+          { label: 'overview', src: 'e6e2e6e637.png', alt: 'Overview screen with the current cycle phase, next period, average cycle and tips' }
         ]
       }
     };
@@ -193,10 +193,10 @@ class Component extends DCLogic {
         pick: () => this.setState({ view: id })
       })),
       evo: [
-        { date: 'Mar 20', label: 'Default first version', src: 'assets/e7314c70db.png', alt: 'Log screen, March 20: default purple components' },
-        { date: 'Mar 29', label: 'Cards, pink palette, pill buttons', src: 'assets/d3ceb94e4b.png', alt: 'Log screen, March 29: inputs in cards with pink pill buttons and symptom chips' },
-        { date: 'Apr 2', label: 'Softer, rounded font', src: 'assets/4fc5a90256.png', alt: 'Log screen, April 2: rounded font and sentence-case labels' },
-        { date: 'Apr 3', label: 'Logo and reminders tab', src: 'assets/24f37f54ce.png', alt: 'Log screen, April 3: moon logo and a fourth tab for reminders' }
+        { date: 'Mar 20', label: 'Default first version', src: 'e7314c70db.png', alt: 'Log screen, March 20: default purple components' },
+        { date: 'Mar 29', label: 'Cards, pink palette, pill buttons', src: 'd3ceb94e4b.png', alt: 'Log screen, March 29: inputs in cards with pink pill buttons and symptom chips' },
+        { date: 'Apr 2', label: 'Softer, rounded font', src: '4fc5a90256.png', alt: 'Log screen, April 2: rounded font and sentence-case labels' },
+        { date: 'Apr 3', label: 'Logo and reminders tab', src: '24f37f54ce.png', alt: 'Log screen, April 3: moon logo and a fourth tab for reminders' }
       ]
     };
   }

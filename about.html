@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About | Charlotte Erkau</title>
 <meta name="description" content="About Charlotte Erkau: skills, experience, coursework and involvement.">
-<link rel="icon" href="assets/bdf4886434.svg" type="image/svg+xml">
+<link rel="icon" href="bdf4886434.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;family=Cedarville+Cursive&amp;display=swap" rel="stylesheet">
 <style>
-body{margin:0;cursor:url(assets/a1a898a6dc.svg) 3 2, auto}
+body{margin:0;cursor:url(a1a898a6dc.svg) 3 2, auto}
 a{color:inherit}a:hover{opacity:.75}
 button:focus-visible,a:focus-visible{outline:3px solid #3B4FA0;outline-offset:3px}
 @keyframes flick{0%,100%{opacity:1}42%{opacity:.86}48%{opacity:.97}73%{opacity:.9}}
@@ -54,7 +54,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #3B4FA0;outline-offset:3p
           <span style="font-family: 'Cedarville Cursive', cursive; font-size: 28px; line-height: 1.3; color: {{t.note}}">{{switchLabel}}</span>
         </div>
         <div style="position: relative; width: 100%; max-width: 440px; line-height: 0">
-          <img src="assets/d05209b662.webp" alt="Hand-drawn illustration of Charlotte typing at her desk, feet up" style="width: 100%; height: auto; filter: {{t.imgFilter}}; transition: filter .4s">
+          <img src="d05209b662.webp" alt="Hand-drawn illustration of Charlotte typing at her desk, feet up" style="width: 100%; height: auto; filter: {{t.imgFilter}}; transition: filter .4s">
           <sc-if value="{{isOff}}" hint-placeholder-val="{{ false }}">
             <div class="screenglow" aria-hidden="true" style="position: absolute; top: -30%; bottom: -10%; left: -15%; right: -15%; pointer-events: none; mix-blend-mode: screen; background: conic-gradient(from 0deg at 23.5% 29.9%, rgba(200,224,255,0) 0deg 66deg, rgba(200,224,255,.3) 88deg, rgba(200,224,255,.3) 101deg, rgba(200,224,255,0) 123deg 360deg); -webkit-mask-image: radial-gradient(ellipse 62% 62% at 23.5% 29.9%, #000 15%, transparent 100%); mask-image: radial-gradient(ellipse 62% 62% at 23.5% 29.9%, #000 15%, transparent 100%)"></div>
             <div class="screenglow" aria-hidden="true" style="position: absolute; top: -30%; bottom: -10%; left: -15%; right: -15%; pointer-events: none; mix-blend-mode: screen; background: radial-gradient(ellipse 3.4% 9.5% at 24.6% 29.6%, rgba(215,232,255,.8), rgba(215,232,255,.3) 60%, rgba(215,232,255,0) 100%), radial-gradient(ellipse 11.5% 14.3% at 70.8% 33.6%, rgba(230,238,255,.55), rgba(230,238,255,.2) 55%, rgba(230,238,255,0) 100%)"></div>
@@ -155,7 +155,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #3B4FA0;outline-offset:3p
 </div>
 </template>
 <noscript><p style="font-family: sans-serif; padding: 24px">This site needs JavaScript turned on to show everything.</p></noscript>
-<script src="js/dc.js"></script>
+<script src="dc.js"></script>
 <script>
 class Component extends DCLogic {
   constructor(props) {
@@ -185,7 +185,7 @@ class Component extends DCLogic {
     const starVis = on ? 'hidden' : 'visible';
     const starOp = on ? 0 : 1;
     const starGlow = 'drop-shadow(0 0 6px rgba(251,234,176,.9)) drop-shadow(0 0 14px rgba(251,234,176,.5))';
-    const st = on ? {burst: 'assets/1308d7e568.svg', cluster: 'assets/6392a8eb96.svg', dotted: 'assets/a815f9a96b.svg', long: 'assets/0ca27e9f90.svg', outline: 'assets/87c5407749.svg', shooting: 'assets/abb59249f7.svg'} : {burst: 'assets/02286632c1.svg', cluster: 'assets/7abc6d15b8.svg', dotted: 'assets/50acf25646.svg', long: 'assets/b2c0f611ff.svg', outline: 'assets/b165fc2a2c.svg', shooting: 'assets/a6dd2630e1.svg'};
+    const st = on ? {burst: '1308d7e568.svg', cluster: '6392a8eb96.svg', dotted: 'a815f9a96b.svg', long: '0ca27e9f90.svg', outline: '87c5407749.svg', shooting: 'abb59249f7.svg'} : {burst: '02286632c1.svg', cluster: '7abc6d15b8.svg', dotted: '50acf25646.svg', long: 'b2c0f611ff.svg', outline: 'b165fc2a2c.svg', shooting: 'a6dd2630e1.svg'};
     return {
       starVis, starOp, starGlow,
       st,
@@ -195,7 +195,7 @@ class Component extends DCLogic {
       my: this.state.my,
       track: (e) => { if (!this.state.lightsOn) this.setState({ mx: e.clientX, my: e.clientY }); },
       lightsOn: on ? 'true' : 'false',
-      switchImg: on ? 'assets/31d3faf363.png' : 'assets/fa79f5a31b.png',
+      switchImg: on ? '31d3faf363.png' : 'fa79f5a31b.png',
       switchLabel: on ? 'flip the light' : 'lights off: cozy mode',
       toggle: () => this.setState({ lightsOn: !this.state.lightsOn }),
       skills: [

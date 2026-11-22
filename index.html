@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Charlotte Erkau</title>
 <meta name="description" content="Charlotte Erkau: Computer Engineering student at the University of Manitoba working across software, engineering and design.">
-<link rel="icon" href="assets/bdf4886434.svg" type="image/svg+xml">
+<link rel="icon" href="bdf4886434.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;family=Cedarville+Cursive&amp;display=swap" rel="stylesheet">
 <style>
-body{margin:0;cursor:url(assets/bdf4886434.svg) 16 16, auto}
+body{margin:0;cursor:url(bdf4886434.svg) 16 16, auto}
 a{color:#1F1D1A}a:hover{opacity:.75}
 button:focus-visible,a:focus-visible{outline:3px solid #3B4FA0;outline-offset:3px}
 .stk img{transition:transform .2s ease;filter:drop-shadow(3px 4px 0 rgba(31,29,26,.12))}
@@ -102,7 +102,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #3B4FA0;outline-offset:3p
 </div>
 </template>
 <noscript><p style="font-family: sans-serif; padding: 24px">This site needs JavaScript turned on to show everything.</p></noscript>
-<script src="js/dc.js"></script>
+<script src="dc.js"></script>
 <script>
 class Component extends DCLogic {
   constructor(props) {
@@ -138,17 +138,17 @@ class Component extends DCLogic {
   }
   renderVals() {
     const defs = [
-      { id: 'women', src: 'assets/78c65760c2.png', alt: 'W.O.M.E.N. patch', left: '7%', top: '12%', w: '15%', rot: -6,
+      { id: 'women', src: '78c65760c2.png', alt: 'W.O.M.E.N. patch', left: '7%', top: '12%', w: '15%', rot: -6,
         title: 'W.O.M.E.N.', text: 'I’m a member of the Women of Manitoba Engineering Network.', href: 'about.html', cta: 'more about me' },
-      { id: 'esp32', src: 'assets/e787945730.png', alt: 'ESP32 dev board', left: '39%', top: '5%', w: '14%', rot: 4,
+      { id: 'esp32', src: 'e787945730.png', alt: 'ESP32 dev board', left: '39%', top: '5%', w: '14%', rot: 4,
         title: 'An ESP32 board', text: 'I used this board in SweepSync, the communication device for deaf curlers my team designed in Digital Systems Design 1.', href: 'sweepsync.html', cta: 'see the project' },
-      { id: 'tama', src: 'assets/dbc2950727.png', alt: 'Tamagotchi keychain', left: '73%', top: '9%', w: '19%', rot: 3,
+      { id: 'tama', src: 'dbc2950727.png', alt: 'Tamagotchi keychain', left: '73%', top: '9%', w: '19%', rot: 3,
         title: 'My virtual pet', text: 'This one lives on my keychain. There’s a digital one you can feed on my contact page.', href: 'contact.html', cta: 'go say hi' },
-      { id: 'umwics', src: 'assets/8b1b6f9456.png', alt: 'UMWiCS sticker', left: '4%', top: '62%', w: '20%', rot: -3,
+      { id: 'umwics', src: '8b1b6f9456.png', alt: 'UMWiCS sticker', left: '4%', top: '62%', w: '20%', rot: -3,
         title: 'UMWiCS', text: 'Member of Women in Computer Science at the University of Manitoba.', href: 'about.html', cta: 'more about me' },
-      { id: 'badge', src: 'assets/cee1107e1e.png', alt: 'Soldered LED circuit', left: '43%', top: '63%', w: '15.5%', rot: 8,
+      { id: 'badge', src: 'cee1107e1e.png', alt: 'Soldered LED circuit', left: '43%', top: '63%', w: '15.5%', rot: 8,
         title: 'My soldered LED circuit', text: 'I built this circuit at a soldering workshop hosted by W.O.M.E.N. (Women of Manitoba Engineering Network). The LED turns on when it’s powered.', href: 'about.html', cta: 'more about me' },
-      { id: 'devhacks', src: 'assets/f3ab04676a.png', alt: 'devHacks 2026 sticker', left: '75%', top: '55%', w: '19%', rot: -5,
+      { id: 'devhacks', src: 'f3ab04676a.png', alt: 'devHacks 2026 sticker', left: '75%', top: '55%', w: '19%', rot: -5,
         title: 'devHacks 2026', text: 'My partner and I built a Star Wars-inspired 3D blackjack game in Unity during the 24-hour hackathon.', href: 'celestial-casino.html', cta: 'see the case study' }
     ];
     const pos = this.state.pos;
